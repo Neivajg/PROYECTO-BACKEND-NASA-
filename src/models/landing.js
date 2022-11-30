@@ -6,17 +6,17 @@ const mongoose = require('mongoose')
 
 const landingSchema = new mongoose.Schema({
     name: {type: String} ,
-    id: {type: String},
+    id: {type: String },
     nametype:{type: String} ,
     recclass:{type: String} ,
-    mass:{type: String},
+    mass:{type: Number},
     fall:{type: String} ,
     year:{type: String},
-    reclat:{type: String},
-    reclong:{type: String} ,
+    reclat:{type: Number},
+    reclong:{type: Number} ,
     geolocation: {
-      latitude: String , 
-      longitude: String
+      latitude: Number , 
+      longitude: Number
     }
   });
 //Crear const para crear conexion 

@@ -3,12 +3,12 @@ const mongoose = require('mongoose')
 const neasSchema = new mongoose.Schema({
     designation: {type: String} ,
     discovery_date: {type: String},
-    h_mag:{type: String} ,
-    moid_au:{type: String} ,
-    q_au_1:{type: String},
-    q_au_2:{type: String} ,
-    period_yr:{type: String},
-    i_deg:{type: String},
+    h_mag:{type: Number} ,
+    moid_au:{type: Number} ,
+    q_au_1:{type: Number},
+    q_au_2:{type: Number} ,
+    period_yr:{type: Number},
+    i_deg:{type: Number},
     pha:{type: String} ,
     orbit_class: {type:String}
 });

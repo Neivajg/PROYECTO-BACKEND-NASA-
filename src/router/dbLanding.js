@@ -4,20 +4,21 @@
 
 //GET para obtener nombre y masa de todos aquellos meteoritos cuya masa sea igual o superior a una masa (gr) dada (con query parameters)​
 // Ejemplo: /astronomy/landings?minimum_mass=200000​
+    // router.get('/:mass', async (req, res) => {
+    //     const params= req.params.mass
+    //     const landings = await landing.find(`mass:${params}`) 
+    //                                 //   .sort('mass')
+    //                                   .select ('mass')
+    
+    //     res.send(landings)
+    // })
+    
     router.get('/', async (req, res) => {
     
-        const landings = await landing.find({}) 
-                                    //   .sort('mass')
-                                      .select ('mass')
+         const landings = await landing.find({mass})
+                                      .select('mass') 
     
-        res.send(landings)
-    })
-    
-    router.get('/', async (req, res) => {
-    
-        const landings = await landing.find({})  
-    
-        res.send(landings)
+        res.send("landings")
     })
 
 // GET para obtener nombre y masa de uno o más meteoritos cuya masa sea la especificada (route params)​
