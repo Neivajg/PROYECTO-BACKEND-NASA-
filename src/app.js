@@ -1,5 +1,6 @@
 const dbLanding = require('./router/dblanding');
 const dbNeas = require('./router/dbNeas');
+const dbUser = require('./router/dbUser');
 const express = require('express')
 
 const app = express()
@@ -8,8 +9,10 @@ require('./db')()//()se esta llamando la funcion
 
 app.use(express.json()) 
 
-app.use('/landing', dbLanding)
-app.use('/neas', dbNeas)
+app.use('/landing', dbLanding);
+app.use('/neas', dbNeas);
+app.use('/user', dbUser)
+
 
 const port = process.env.PORT || 3000
 
