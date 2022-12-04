@@ -1,8 +1,7 @@
 const landing = require('../models/landing')
 const express = require('express')
-const router = express.Router()  //middelware par poder Crear/Acceder a rutas.
+const router = express.Router()  
 
-//Ruta para comprobaciones:
     router.get('/', async (req, res) => {                      
      res.send(await landing.find({}).select('name mass'))
     })

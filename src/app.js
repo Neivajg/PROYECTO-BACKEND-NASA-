@@ -4,8 +4,8 @@ const dbUser = require('./router/dbUser');
 const express = require('express')
 
 const app = express()
-//Se requiere la conexion solo en la app
-require('./db')()//()se esta llamando la funcion
+
+require('./db')()
 
 app.use(express.json()) 
 

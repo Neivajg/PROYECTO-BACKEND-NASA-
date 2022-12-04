@@ -1,22 +1,18 @@
-//Creamos un modelo para la base de datos landing
-//1)Primero de todo inicializamos el proyecto (npm init)=> Intalamos las dependencias para requerirlas, en este caso: npm i mongoose.
-//2)Requerimos la librería express, ya que requeriremos middelware de esta librería
-//Añadir los json (lading.json y neas.json)como colecciones en la bd compas mongonDB.
 const mongoose = require('mongoose')
 
 const landingSchema = new mongoose.Schema({
-    name: {type: String} ,
-    id: {type: String },
-    nametype:{type: String} ,
-    recclass:{type: String} ,
-    mass:{type: Number},
-    fall:{type: String} ,
-    year:{type: String},
-    reclat:{type: Number},
-    reclong:{type: Number} ,
+    name: {type: String, required:false} ,
+    id: {type: String , required:false},
+    nametype:{type: String, required:false} ,
+    recclass:{type: String, required:false} ,
+    mass:{type: Number, required:false},
+    fall:{type: String, required:false} ,
+    year:{type: String, required:false},
+    reclat:{type: Number, required:false},
+    reclong:{type: Number, required:false} ,
     geolocation: {
-      latitude: Number , 
-      longitude: Number
+      latitude: Number , required:false, 
+      longitude: Number, required:false
     }
   });
 //Crear const para crear conexion 
